@@ -8,11 +8,13 @@
             <label for="newTodo">new:<input id="newTodo" type="checkbox" v-model="formTodo.active"></label>
             <button type="submit">submit</button>
         </form>
-        <p v-for="todo in actives" :key="todo.id">{{todo}}</p>
+        <hr>
+        <Map/>
     </div>
 </template>
 <script>
-import store from '../store';
+import store from '@/store';
+import Map from './Map';
 export default {
   data() {
     return {
@@ -20,6 +22,9 @@ export default {
         active: false
       }
     };
+  },
+  components: {
+    Map
   },
   methods: {
     increment() {
@@ -36,9 +41,6 @@ export default {
   computed: {
     count() {
       return store.state.count;
-    },
-    actives() {
-      return store.getters.activeTodos;
     }
   }
 };

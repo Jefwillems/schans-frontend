@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld';
 import Contact from '@/components/Contact';
 import Huisje from '@/components/Huisje';
 import Fotos from '@/components/Fotos';
-import Locatie from '@/components/Locatie';
+import Locatie from '@/components/locatie/Locatie';
 import Agenda from '@/components/agenda/Agenda';
 
 Vue.use(Router);
