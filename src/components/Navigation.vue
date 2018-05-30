@@ -1,9 +1,7 @@
 <template>
     <nav>
+          <router-link to="/">home</router-link>
         <ul>
-            <li>
-                <router-link to="/">home</router-link>
-            </li>
             <li>
                 <router-link to="/contact">contact</router-link>
             </li>
@@ -50,6 +48,10 @@ nav {
       #{$a-tags-hover} {
         color: lighten($color: $base-text-color, $amount: 50%);
         text-decoration: underline;
+      }
+      a.router-link-exact-active,
+      a.router-link-active {
+        background-color: #aaaaaa;
       }
     }
   }
