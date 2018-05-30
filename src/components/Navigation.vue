@@ -1,6 +1,8 @@
 <template>
     <nav>
-          <router-link to="/">home</router-link>
+        <div class="brand">
+            <router-link to="/">De Schans</router-link>
+        </div>
         <ul>
             <li>
                 <router-link to="/contact">contact</router-link>
@@ -33,17 +35,29 @@ $a-tags-hover: 'a:active, a:hover';
 nav {
   background-color: $bg-color;
   font-size: 1.25rem;
+  display: flex;
+  flex-direction: row;
   ul {
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
     li {
       list-style: none;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
       #{$a-tags} {
         text-decoration: none;
         color: $base-text-color;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
       }
       #{$a-tags-hover} {
         color: lighten($color: $base-text-color, $amount: 50%);
@@ -51,9 +65,13 @@ nav {
       }
       a.router-link-exact-active,
       a.router-link-active {
-        background-color: #aaaaaa;
+        border-bottom: 3px solid #499ff5;
       }
     }
+  }
+  .brand {
+    font-size: 1.5rem;
+    padding: 1rem;
   }
 }
 </style>
